@@ -1,0 +1,53 @@
+import { CollectionConfig } from 'payload/types';
+
+export const Profile: CollectionConfig = {
+  slug: 'profile',
+  admin: {
+    useAsTitle: 'name',
+  },
+  fields: [
+    {
+      name: 'name',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'role',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'headline',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'subheadline',
+      type: 'textarea',
+      required: true,
+    },
+    {
+      name: 'email',
+      type: 'email',
+      required: true,
+    },
+    {
+      name: 'social',
+      type: 'group',
+      fields: [
+        {
+          name: 'linkedin',
+          type: 'text',
+        },
+        {
+          name: 'twitter',
+          type: 'text',
+        },
+        {
+          name: 'github',
+          type: 'text',
+        },
+      ],
+    },
+  ],
+};
