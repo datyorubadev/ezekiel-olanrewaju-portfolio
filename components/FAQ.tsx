@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FadeIn } from './ui/FadeIn';
 import { Plus, Minus } from 'lucide-react';
-import { useFAQs } from '../lib/payload';
+import { useFAQs } from '../lib/sanity';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const FAQ: React.FC = () => {

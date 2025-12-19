@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { Layout } from '../components/Layout';
 import { FadeIn } from '../components/ui/FadeIn';
-import { useProjectBySlug, urlFor } from '../lib/payload';
+import { useProjectBySlug, urlFor } from '../lib/sanity';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 
 export const ProjectDetail: React.FC = () => {

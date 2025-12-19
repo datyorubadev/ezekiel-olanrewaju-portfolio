@@ -1,6 +1,6 @@
 import React from 'react';
 import { FadeIn } from './ui/FadeIn';
-import { useProcess } from '../lib/payload';
+import { useProcess } from '../lib/sanity';
 
 export const Process: React.FC = () => {
   const processSteps = useProcess();

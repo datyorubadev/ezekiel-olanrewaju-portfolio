@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FadeIn } from './ui/FadeIn';
-import { useProjects, urlFor } from '../lib/payload';
+import { useProjects, urlFor } from '../lib/sanity';
 import { ArrowUpRight } from 'lucide-react';
 
 export const Projects: React.FC = () => {

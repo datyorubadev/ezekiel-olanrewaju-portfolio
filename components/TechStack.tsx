@@ -1,6 +1,6 @@
 import React from 'react';
 import { FadeIn } from './ui/FadeIn';
-import { useTechStack } from '../lib/payload';
+import { useTechStack } from '../lib/sanity';
 
 export const TechStack: React.FC = () => {
   const techStack = useTechStack();

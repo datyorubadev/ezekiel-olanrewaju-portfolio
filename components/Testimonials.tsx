@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FadeIn } from './ui/FadeIn';
-import { useTestimonials } from '../lib/payload';
+import { useTestimonials } from '../lib/sanity';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 

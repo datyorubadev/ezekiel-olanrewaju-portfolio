@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useProfile } from '../lib/payload';
+import { useProfile } from '../lib/sanity';
 import { Link } from 'react-router-dom';
 
 export const Hero: React.FC = () => {

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight, ArrowLeft } from 'lucide-react';
 import { Layout } from '../components/Layout';
 import { FadeIn } from '../components/ui/FadeIn';
-import { useProjects, urlFor } from '../lib/payload';
+import { useProjects, urlFor } from '../lib/sanity';
 
 export const AllProjects: React.FC = () => {
   const projects = useProjects();

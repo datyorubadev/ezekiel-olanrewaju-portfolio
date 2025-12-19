@@ -1,6 +1,6 @@
 import React from 'react';
 import { FadeIn } from './ui/FadeIn';
-import { useServices } from '../lib/payload';
+import { useServices } from '../lib/sanity';
 
 export const Services: React.FC = () => {
   const services = useServices();

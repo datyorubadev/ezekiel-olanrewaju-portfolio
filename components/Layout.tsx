@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { useProfile } from '../lib/payload';
+import { useProfile } from '../lib/sanity';
 
 const NavItem = ({ 
   to, 

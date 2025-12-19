@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FadeIn } from './ui/FadeIn';
-import { useProfile } from '../lib/payload';
+import { useProfile } from '../lib/sanity';
 
 export const Contact: React.FC = () => {
   const profile = useProfile();
