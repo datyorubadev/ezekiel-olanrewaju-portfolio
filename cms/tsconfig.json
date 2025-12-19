@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "strict": true,
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@payload-config": [
+        "./payload.config.ts"
+      ]
+    }
+  },
+  "include": [
+    "*.js",
+    "*.ts",
+    "src",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

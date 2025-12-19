@@ -1,9 +1,12 @@
-import { CollectionConfig } from 'payload/types';
+import { CollectionConfig } from 'payload'
 
 export const Testimonials: CollectionConfig = {
   slug: 'testimonials',
   admin: {
     useAsTitle: 'author',
+  },
+  access: {
+    read: () => true,
   },
   fields: [
     {
@@ -27,9 +30,13 @@ export const Testimonials: CollectionConfig = {
       required: true,
     },
     {
+      name: 'authorImage',
+      type: 'text',
+    },
+    {
       name: 'logo',
       type: 'upload',
       relationTo: 'media',
     },
   ],
-};
+}

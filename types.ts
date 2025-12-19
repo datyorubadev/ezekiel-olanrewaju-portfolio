@@ -3,12 +3,12 @@ export interface Project {
   title: string;
   summary: string;
   client: string;
-  year: string;
+  year: string | number;
   coverImage: any; // Can be string URL (fallback) or Sanity Image Object
-  tags: string[];
+  tags: (string | { tag: string })[];
   description: string;
-  problem: string;
-  solution: string;
+  problem: any;
+  solution: any;
   metrics: {
     label: string;
     value: string;
@@ -20,11 +20,12 @@ export interface Project {
 export interface ServiceItem {
   title: string;
   description: string;
-  tags: string[];
+  tags: (string | { tag: string })[];
 }
 
 export interface ProcessStep {
-  number: string | number;
+  number?: string | number; // Fallback
+  stepNumber?: number; // From Payload
   title: string;
   description: string;
 }
@@ -34,7 +35,8 @@ export interface Testimonial {
   author: string;
   role: string;
   company: string;
-  logo?: any; 
+  authorImage?: string;
+  logo?: any;
 }
 
 export interface FAQ {
@@ -53,4 +55,12 @@ export interface Profile {
     twitter: string;
     github: string;
   };
+}
+
+export interface About {
+  content: string;
+  expertise: {
+    title: string;
+    description: string;
+  }[];
 }

@@ -1,21 +1,24 @@
-import { CollectionConfig } from 'payload/types';
+import { CollectionConfig } from 'payload'
 
 export const Projects: CollectionConfig = {
   slug: 'projects',
   admin: {
     useAsTitle: 'title',
   },
+  access: {
+    read: () => true,
+  },
   fields: [
+    {
+      name: 'title',
+      type: 'text',
+      required: true,
+    },
     {
       name: 'slug',
       type: 'text',
       required: true,
       unique: true,
-    },
-    {
-      name: 'title',
-      type: 'text',
-      required: true,
     },
     {
       name: 'summary',
@@ -29,14 +32,12 @@ export const Projects: CollectionConfig = {
     },
     {
       name: 'year',
-      type: 'text',
+      type: 'number',
       required: true,
     },
     {
       name: 'coverImage',
-      type: 'upload',
-      relationTo: 'media',
-      required: true,
+      type: 'text',
     },
     {
       name: 'tags',
@@ -45,7 +46,6 @@ export const Projects: CollectionConfig = {
         {
           name: 'tag',
           type: 'text',
-          required: true,
         },
       ],
     },
@@ -56,12 +56,12 @@ export const Projects: CollectionConfig = {
     },
     {
       name: 'problem',
-      type: 'textarea',
+      type: 'richText',
       required: true,
     },
     {
       name: 'solution',
-      type: 'textarea',
+      type: 'richText',
       required: true,
     },
     {
@@ -69,46 +69,22 @@ export const Projects: CollectionConfig = {
       type: 'array',
       fields: [
         {
-          name: 'label',
+          name: 'name',
           type: 'text',
-          required: true,
         },
         {
           name: 'value',
           type: 'text',
-          required: true,
         },
         {
           name: 'description',
           type: 'textarea',
-          required: true,
         },
       ],
     },
     {
       name: 'chartData',
-      type: 'array',
-      fields: [
-        {
-          name: 'name',
-          type: 'text',
-          required: true,
-        },
-        {
-          name: 'value',
-          type: 'number',
-          required: true,
-        },
-        {
-          name: 'type',
-          type: 'select',
-          options: [
-            { label: 'Before', value: 'before' },
-            { label: 'After', value: 'after' },
-          ],
-          required: true,
-        },
-      ],
+      type: 'json',
     },
   ],
-};
+}

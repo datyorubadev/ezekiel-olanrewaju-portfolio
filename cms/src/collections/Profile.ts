@@ -1,9 +1,12 @@
-import { CollectionConfig } from 'payload/types';
+import { CollectionConfig } from 'payload'
 
 export const Profile: CollectionConfig = {
   slug: 'profile',
   admin: {
     useAsTitle: 'name',
+  },
+  access: {
+    read: () => true,
   },
   fields: [
     {
@@ -50,4 +53,4 @@ export const Profile: CollectionConfig = {
       ],
     },
   ],
-};
+}

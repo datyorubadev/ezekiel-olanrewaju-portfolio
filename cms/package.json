@@ -1,23 +1,30 @@
 {
-  "name": "cms",
-  "version": "1.0.0",
-  "description": "Payload CMS for Ezekiel Olanrewaju Portfolio",
-  "main": "dist/server.js",
-  "scripts": {
-    "build": "payload build",
-    "dev": "tsx src/server.ts",
-    "start": "node dist/server.js"
-  },
+  "name": "payload-cms",
+  "type": "module",
   "dependencies": {
-    "@payloadcms/db-postgres": "^3.0.0",
-    "@payloadcms/richtext-lexical": "^3.0.0",
-    "dotenv": "^16.0.0",
-    "express": "^4.22.1",
-    "payload": "^3.0.0"
+    "@payloadcms/db-postgres": "^3.67.0",
+    "@payloadcms/next": "^3.67.0",
+    "@payloadcms/richtext-lexical": "^3.67.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "graphql": "^16.12.0",
+    "payload": "^3.67.0",
+    "sharp": "^0.34.5"
+  },
+  "scripts": {
+    "dev": "next dev -p 3002",
+    "build": "next build",
+    "start": "next start",
+    "generate:types": "payload generate:types",
+    "seed": "tsx src/seed.ts",
+    "lint": "next lint"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.10.1",
+    "@types/pg": "^8.15.6",
+    "pg": "^8.16.3",
     "tsx": "^4.21.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.9.3"
   }
 }

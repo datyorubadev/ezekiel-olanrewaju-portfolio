@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FadeIn } from './ui/FadeIn';
 import { Plus, Minus } from 'lucide-react';
-import { useFAQs } from '../lib/sanity';
+import { useFAQs } from '../lib/payload';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const FAQ: React.FC = () => {
@@ -14,7 +14,7 @@ export const FAQ: React.FC = () => {
 
   return (
     <section className="py-32 md:py-48 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-12 gap-12">
           {/* Left Column: Heading & CTA */}
           <div className="md:col-span-5">
@@ -22,11 +22,11 @@ export const FAQ: React.FC = () => {
               <span className="inline-block px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full mb-6">
                 FAQ
               </span>
-              <h2 className="text-4xl font-semibold tracking-tight text-neutral-900 mb-8 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-neutral-900 mb-8 leading-tight">
                 What would you like to know about my process?
               </h2>
-              <a 
-                href="#contact" 
+              <a
+                href="#contact"
                 className="inline-flex items-center justify-center px-6 py-3 border border-neutral-200 rounded-full text-neutral-900 hover:bg-neutral-900 hover:text-white transition-all text-sm font-medium"
               >
                 Let's talk specifically
@@ -38,7 +38,7 @@ export const FAQ: React.FC = () => {
           <div className="md:col-span-7 space-y-4">
             {faqs.map((faq, index) => (
               <FadeIn key={index} delay={index * 0.1}>
-                <div 
+                <div
                   className={`bg-neutral-50 rounded-xl overflow-hidden cursor-pointer transition-colors duration-300 ${openIndex === index ? 'bg-neutral-100' : 'hover:bg-neutral-100'}`}
                   onClick={() => toggleFAQ(index)}
                 >

@@ -4,6 +4,10 @@ import { Home } from './pages/Home';
 import { ProjectDetail } from './pages/ProjectDetail';
 import { AllProjects } from './pages/AllProjects';
 
+import { ChatWidget } from './components/ChatWidget';
+import { BackgroundMusic } from './components/BackgroundMusic';
+import { Preloader } from './components/Preloader';
+
 function App() {
   return (
     <Router>
@@ -12,6 +16,9 @@ function App() {
         <Route path="/projects" element={<AllProjects />} />
         <Route path="/projects/:slug" element={<ProjectDetail />} />
       </Routes>
+      <ChatWidget />
+      <BackgroundMusic />
+      <Preloader />
     </Router>
   );
 }

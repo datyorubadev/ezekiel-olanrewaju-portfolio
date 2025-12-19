@@ -1,19 +1,14 @@
-import { CollectionConfig } from 'payload/types';
+import { CollectionConfig } from 'payload'
 
 export const TechStack: CollectionConfig = {
   slug: 'tech-stack',
   admin: {
-    useAsTitle: 'title',
+    useAsTitle: 'id',
+  },
+  access: {
+    read: () => true,
   },
   fields: [
-    {
-      name: 'title',
-      type: 'text',
-      defaultValue: 'Tech Stack',
-      admin: {
-        hidden: true,
-      },
-    },
     {
       name: 'tools',
       type: 'array',
@@ -21,9 +16,8 @@ export const TechStack: CollectionConfig = {
         {
           name: 'tool',
           type: 'text',
-          required: true,
         },
       ],
     },
   ],
-};
+}

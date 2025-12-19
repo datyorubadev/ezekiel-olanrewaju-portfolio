@@ -1,9 +1,12 @@
-import { CollectionConfig } from 'payload/types';
+import { CollectionConfig } from 'payload'
 
 export const Services: CollectionConfig = {
   slug: 'services',
   admin: {
     useAsTitle: 'title',
+  },
+  access: {
+    read: () => true,
   },
   fields: [
     {
@@ -23,9 +26,13 @@ export const Services: CollectionConfig = {
         {
           name: 'tag',
           type: 'text',
-          required: true,
         },
       ],
     },
+    {
+      name: 'order',
+      type: 'number',
+      required: true,
+    },
   ],
-};
+}

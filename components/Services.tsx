@@ -1,13 +1,13 @@
 import React from 'react';
 import { FadeIn } from './ui/FadeIn';
-import { useServices } from '../lib/sanity';
+import { useServices } from '../lib/payload';
 
 export const Services: React.FC = () => {
   const services = useServices();
 
   return (
     <section id="services" className="py-32 md:py-48">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
         <FadeIn>
           {/* 
             flex-col items-start = Mobile: Column direction, aligned left.
@@ -23,16 +23,16 @@ export const Services: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-6">
           {services.map((service, index) => (
-            <FadeIn key={index} delay={index * 0.1} className="h-full">
-              <div className="p-8 border border-neutral-100 rounded-2xl hover:border-neutral-300 hover:shadow-sm transition-all h-full bg-white group cursor-default text-left">
+            <FadeIn key={index} delay={index * 0.1} className="h-full w-full">
+              <div className="px-4 py-8 md:p-8 border border-neutral-200 rounded-2xl hover:border-neutral-300 transition-all h-full bg-white group cursor-default text-left w-full">
                 <h3 className="text-xl font-semibold mb-3 group-hover:text-accent-600 transition-colors">{service.title}</h3>
                 <p className="text-neutral-600 mb-6 leading-relaxed">
                   {service.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mt-auto">
-                  {service.tags?.map(tag => (
-                    <span key={tag} className="px-3 py-1 bg-neutral-50 text-neutral-500 text-xs rounded-full border border-neutral-100">
-                      {tag}
+                  {service.tags?.map((tagItem: any) => (
+                    <span key={tagItem.tag || tagItem} className="px-3 py-1 bg-neutral-50 text-neutral-500 text-xs rounded-full border border-neutral-100">
+                      {tagItem.tag || tagItem}
                     </span>
                   ))}
                 </div>

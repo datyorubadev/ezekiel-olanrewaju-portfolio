@@ -1,6 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { HelmetProvider } from 'react-helmet-async';
+import './index.css';
+
+// Import Inter font weights
+import '@fontsource/inter/300.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -10,6 +18,8 @@ if (!rootElement) {
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    <App />
+    <HelmetProvider>
+      <App />
+    </HelmetProvider>
   </React.StrictMode>
 );

@@ -1,14 +1,17 @@
-import { CollectionConfig } from 'payload/types';
+import { CollectionConfig } from 'payload'
 
 export const ProcessSteps: CollectionConfig = {
   slug: 'process-steps',
   admin: {
     useAsTitle: 'title',
   },
+  access: {
+    read: () => true,
+  },
   fields: [
     {
-      name: 'number',
-      type: 'text',
+      name: 'stepNumber',
+      type: 'number',
       required: true,
     },
     {
@@ -22,4 +25,4 @@ export const ProcessSteps: CollectionConfig = {
       required: true,
     },
   ],
-};
+}
