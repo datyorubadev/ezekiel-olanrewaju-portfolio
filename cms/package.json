@@ -7,8 +7,12 @@
     "@payloadcms/richtext-lexical": "^3.67.0",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
+    "express": "^5.2.1",
     "graphql": "^16.12.0",
+    "next": "15.1.0",
     "payload": "^3.67.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "sharp": "^0.34.5"
   },
   "scripts": {
@@ -26,8 +30,5 @@
     "pg": "^8.16.3",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
-  },
-  "engines": {
-    "node": ">=18.17.0"
   }
 }
