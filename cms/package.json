@@ -7,13 +7,15 @@
     "@payloadcms/richtext-lexical": "^3.67.0",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
-    "express": "^5.2.1",
     "graphql": "^16.12.0",
     "next": "15.1.0",
     "payload": "^3.67.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "sharp": "^0.34.5"
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.1.17",
+    "@tailwindcss/postcss": "^4.1.17",
+    "postcss": "^8.5.6"
   },
   "scripts": {
     "dev": "next dev -p 3002",
