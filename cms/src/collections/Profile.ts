@@ -35,6 +35,24 @@ export const Profile: CollectionConfig = {
       required: true,
     },
     {
+      name: 'location',
+      type: 'text',
+      label: 'Location',
+      required: true,
+    },
+    {
+      name: 'contactHeadline', // Renamed for camelCase consistency
+      type: 'text',
+      label: 'Contact Headline',
+      required: true,
+    },
+    {
+      name: 'contactDescription',
+      type: 'textarea',
+      label: 'Contact Description',
+      required: true,
+    },
+    {
       name: 'social',
       type: 'group',
       fields: [
