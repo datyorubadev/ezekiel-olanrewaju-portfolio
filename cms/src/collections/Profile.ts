@@ -32,7 +32,7 @@ export const Profile: CollectionConfig = {
     {
       name: 'email',
       type: 'email',
-      required: true,
+      required: true, // Contact Email
     },
     {
       name: 'location',
