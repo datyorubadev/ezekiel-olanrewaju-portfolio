@@ -26,6 +26,11 @@ export default buildConfig({
             baseDir: path.resolve(dirname),
         },
     },
+    // Define the Server URL (Critical for Production)
+    serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || '',
+    // CORS: Allow Frontend and CMS itself
+    cors: [process.env.PAYLOAD_PUBLIC_SERVER_URL || ''].filter(Boolean),
+    csrf: [process.env.PAYLOAD_PUBLIC_SERVER_URL || ''].filter(Boolean),
     collections: [
         Users,
         Hero,
