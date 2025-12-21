@@ -29,8 +29,16 @@ export default buildConfig({
     // Define the Server URL (Critical for Production)
     serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || '',
     // CORS: Allow Frontend and CMS itself
-    cors: [process.env.PAYLOAD_PUBLIC_SERVER_URL || ''].filter(Boolean),
-    csrf: [process.env.PAYLOAD_PUBLIC_SERVER_URL || ''].filter(Boolean),
+    cors: [
+        process.env.PAYLOAD_PUBLIC_SERVER_URL || '',
+        'https://ezekiel-olanrewaju.vercel.app', // Explicitly allow Frontend
+        'http://localhost:5173', // Allow local frontend
+    ].filter(Boolean),
+    csrf: [
+        process.env.PAYLOAD_PUBLIC_SERVER_URL || '',
+        'https://ezekiel-olanrewaju.vercel.app',
+        'http://localhost:5173',
+    ].filter(Boolean),
     collections: [
         Users,
         Hero,
