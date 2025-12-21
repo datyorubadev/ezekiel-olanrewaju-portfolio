@@ -41,15 +41,15 @@ export const Profile: CollectionConfig = {
       required: true,
     },
     {
-      name: 'contactHeadline', // Renamed for camelCase consistency
+      name: 'contactHeadline',
       type: 'text',
-      label: 'Contact Headline',
+      label: 'Lets Build (Headline)', // Updated Label for visibility
       required: true,
     },
     {
       name: 'contactDescription',
       type: 'textarea',
-      label: 'Contact Description',
+      label: 'Lets Build (Description)', // Updated Label for visibility
       required: true,
     },
     {
