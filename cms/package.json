@@ -15,7 +15,8 @@
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.17",
     "@tailwindcss/postcss": "^4.1.17",
-    "postcss": "^8.5.6"
+    "postcss": "^8.5.6",
+    "autoprefixer": "^10.4.20"
   },
   "scripts": {
     "dev": "next dev -p 3002",
