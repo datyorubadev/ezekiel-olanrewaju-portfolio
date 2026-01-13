@@ -5,7 +5,10 @@ export const PROFILE = {
   role: "AI & Automation Specialist",
   headline: "Building LLM-powered workflows, RAG systems, and automations that actually ship.",
   subheadline: "I help startups and agencies integrate robust AI operations, moving beyond hype to measurable efficiency.",
-  email: "hello@ezekiel.ai", // Mock
+  email: "hello@ezekiel.ai",
+  location: "Remote / London, UK",
+  contactHeadline: "Let's build something intelligent.",
+  contactDescription: "Whether you need a strategy audit or a full-scale RAG implementation, I'm ready to help you ship.",
   social: {
     linkedin: "#",
     twitter: "#",

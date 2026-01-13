@@ -23,7 +23,21 @@ const seed = async () => {
                     headline: PROFILE.headline,
                     subheadline: PROFILE.subheadline,
                     email: PROFILE.email,
+                    location: PROFILE.location,
+                    contactHeadline: PROFILE.contactHeadline,
+                    contactDescription: PROFILE.contactDescription,
                     social: PROFILE.social,
+                },
+            })
+        } else {
+            // Update existing profile to ensure new fields are populated
+            await payload.update({
+                collection: 'profile',
+                id: existingProfile.docs[0].id,
+                data: {
+                    location: PROFILE.location,
+                    contactHeadline: PROFILE.contactHeadline,
+                    contactDescription: PROFILE.contactDescription,
                 },
             })
         }

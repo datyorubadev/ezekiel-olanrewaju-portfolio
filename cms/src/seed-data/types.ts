@@ -34,7 +34,7 @@ export interface Testimonial {
   author: string;
   role: string;
   company: string;
-  logo?: any; 
+  logo?: any;
 }
 
 export interface FAQ {
@@ -48,6 +48,9 @@ export interface Profile {
   headline: string;
   subheadline: string;
   email: string;
+  location: string;
+  contactHeadline: string;
+  contactDescription: string;
   social: {
     linkedin: string;
     twitter: string;
