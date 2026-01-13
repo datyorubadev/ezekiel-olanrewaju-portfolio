@@ -28,14 +28,16 @@ export default buildConfig({
     },
     // Define the Server URL (Critical for Production)
     serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || '',
-    // CORS: Allow Frontend and CMS itself
+    // CORS: Allow Frontend, CMS itself, and Vercel Deployment URLs
     cors: [
         process.env.PAYLOAD_PUBLIC_SERVER_URL || '',
+        process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '', // Dynamic Vercel URL
         'https://ezekiel-olanrewaju.vercel.app', // Explicitly allow Frontend
         'http://localhost:5173', // Allow local frontend
     ].filter(Boolean),
     csrf: [
         process.env.PAYLOAD_PUBLIC_SERVER_URL || '',
+        process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '', // Dynamic Vercel URL
         'https://ezekiel-olanrewaju.vercel.app',
         'http://localhost:5173',
     ].filter(Boolean),
