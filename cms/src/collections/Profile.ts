@@ -7,6 +7,9 @@ export const Profile: CollectionConfig = {
   },
   access: {
     read: () => true,
+    create: () => true, // Explicitly allow for debugging
+    update: () => true, // Explicitly allow for debugging
+    delete: () => true, // Explicitly allow for debugging
   },
   fields: [
     {

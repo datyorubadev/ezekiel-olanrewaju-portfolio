@@ -64,9 +64,4 @@ export default buildConfig({
             connectionString: process.env.DATABASE_URI,
         },
     }),
-    rateLimit: {
-        trustProxy: true,
-        window: 15 * 60 * 1000, // 15 minutes
-        limit: 500, // limit each IP to 500 requests per windowMs
-    },
 })
